@@ -54,30 +54,29 @@ function update5Day(data) {
   console.log("----------------5 Day--------------------");
   
   for (var i = 1; i <= 5; i++) {
-    var id = "day"+i;
+    var $printrow0 = $("<div>");
     var $printrow1 = $("<div>");
     var $printrow2 = $("<div>");
-    //var $printrow3 = $("<img>");
+    var $printrow3 = $("<img>");
 
-
-    // var iconid = data.list[i].weather[i].icon;
+   var iconid = data.list[i].weather[i].icon;
     // console.log("iconid "+data.list[i].weather[i].icon);
     // var iconurl = "http://openweathermap.org/img/wn/"+data.list[i].weather[i].icon+"@2x.png";
-    //$printrow3.attr("src","http://openweathermap.org/img/wn/"+data.list[i].weather[i].icon+"@2x.png");
+    $printrow3.attr("src","http://openweathermap.org/img/wn/"+iconid+"@2x.png");
     
+    $("#bottom").append($printrow0);
     $("#bottom").append($printrow1);
     $("#bottom").append($printrow2);
-    //$("#bottom").append($printrow3);
-    $id.append("day "+i+" temp "+data.list[i].main.temp);
-    $id.append("day "+i+" humidity "+data.list[i].main.humidity);
-    $printrow1.append(id);
-    $printrow2.append(id);
+    $("#bottom").append($printrow3);
+
+    $printrow0.append("day "+i+" Date "+data.list[i].dt_txt);
+    $printrow1.append("day "+i+" temp "+data.list[i].main.temp);
+    $printrow2.append("day "+i+" humidity "+data.list[i].main.humidity);
+  
     
   }
 
 }
-
-
 
 
 // CLICK HANDLERS
