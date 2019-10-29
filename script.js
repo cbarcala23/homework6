@@ -31,7 +31,11 @@ function buildQueryURL5day2(city) {
   return queryURL;
 }
 
-
+function buildQueryURLUV(lat, lon) {
+  var queryURL = "http://api.openweathermap.org/data/2.5/uvi?&lat=" + lat + "&lon=" + lon + "&units=imperial&APPID=694e9301cf58974cd061591a93c6ebf3";
+  console.log(queryURL);
+  return queryURL;
+}
 
 function updateCurrentWeather(currentweatherdata) {
 
@@ -45,6 +49,28 @@ function updateCurrentWeather(currentweatherdata) {
   $("#temp").html(currentweatherdata.main.temp + " °F");
   $("#humidity").html(currentweatherdata.main.humidity + " %");
   $("#wind").html(currentweatherdata.wind.speed + " MPH");
+  
+  var lat = currentweatherdata.coord.lat;
+  var lon = currentweatherdata.coord.lon;
+  var queryURLUV = buildQueryURLUV(lat, lon);
+  // Make the AJAX request to the API - GETs the JSON data at the queryURL.
+  // The data then gets passed as an argument to the update5Day function
+  $.ajax({
+    url: queryURLUV,
+    method: "GET"
+  }).then(updateUV);
+
+}
+
+function updateUV(uvdata) {
+
+  // Log the Current Weather Data to console, where it will show up as an object
+  console.log(uvdata);
+  console.log("----------------Current UV--------------------");
+
+  // Add data to the elements
+  $("#uv").html(uvdata.value);
+
 
 }
 
@@ -89,7 +115,9 @@ $("#run-search").on("click", function (event) {
   //clear();
   // Build the query URL for the ajax request to the NYT API
   var queryURL = buildQueryURL();
+
   var queryURL5day = buildQueryURL5day();
+
   // Make the AJAX request to the API - GETs the JSON data at the queryURL.
   // The data then gets passed as an argument to the updateCurrentWeather function
   $.ajax({
