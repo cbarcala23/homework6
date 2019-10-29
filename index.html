@@ -13,7 +13,7 @@
 
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1 align">Weather Dashboard</span>
+        <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
     </nav>
 
     <div class="row" id="div">
@@ -29,18 +29,34 @@
                     <i class="fa fa-search"></i> Search</button>
                 <button class="btn btn-default" id="clear-all">
                     <i class="fa fa-trash"></i> Clear Results</button>
-
             </form>
+            <div class="searches"></div>
         </div>
         <div class="col-md-9">
-            <div class="row1" id="top"></div>
+            <div class="row1" id="top">
+
+                <div class="card">
+                    <h4 class="card-header" id="city">City : </h4>
+                    <div class="card-body">
+                        <p class="card-text"><b>Weather : </b><span id="weather"></span> </p>
+                        <p class="card-text"><b>Temperature : </b><span id="temp"></span> </p>
+                        <p class="card-text"><b>Humidity : </b><span id="humidity"></span></p>
+                        <p class="card-text"><b>Wind Speed : </b><span id="wind"></span> </p>
+                        <p class="card-text"><b>UV Index : </b><span id="uv"> </span></p>
+                    </div>
+                </div>
+
+            </div>
             <div class="row2" id="bottom">
+                <h4>5-Day Forecast:</h4>
+                <div class="fiveDay"></div>
             </div>
         </div>
     </div>
 
     <!-- jQuery JS -->
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <!-- Code to the JavaScript File -->
     <script src="script.js"></script>
 </body>

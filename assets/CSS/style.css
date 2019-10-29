@@ -1,3 +1,24 @@
-.row2 {
-    display: inline;
+.fiveDay {
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+
+#fiveBox {
+    width: 140px;
+    height: 175px;
+    border-radius : 5px;
+    background: rgb(66, 94, 252);
+    display: inline-block;
+    border: 1px solid rgb(62, 62, 252);
+    text-align:center;
+    color: white;
+    padding: 10px;
+    margin: 15px;
+}
+
+.searchbutton {
+    width: 350px;
+    background-color: white;
+    text-align: left;
 }
