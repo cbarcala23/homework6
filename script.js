@@ -2,7 +2,7 @@
 function buildQueryURL() {
   var queryParams = $("#search-term").val();
   console.log("queryParams: " + queryParams);
-  var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + queryParams + "&units=imperial&APPID=694e9301cf58974cd061591a93c6ebf3";
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + queryParams + "&units=imperial&APPID=694e9301cf58974cd061591a93c6ebf3";
   console.log(queryURL);
   return queryURL;
 }
@@ -10,7 +10,7 @@ function buildQueryURL() {
 function buildQueryURL2(city) {
   var queryParams = city;
   console.log("queryParams: " + queryParams);
-  var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + queryParams + "&units=imperial&APPID=694e9301cf58974cd061591a93c6ebf3";
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + queryParams + "&units=imperial&APPID=694e9301cf58974cd061591a93c6ebf3";
   console.log(queryURL);
   return queryURL;
 }
@@ -18,7 +18,7 @@ function buildQueryURL2(city) {
 function buildQueryURL5day() {
   var queryParams = $("#search-term").val();
   console.log("queryParams: " + queryParams);
-  var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + queryParams + "&units=imperial&APPID=694e9301cf58974cd061591a93c6ebf3";
+  var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + queryParams + "&units=imperial&APPID=694e9301cf58974cd061591a93c6ebf3";
   console.log(queryURL);
   return queryURL;
 }
@@ -26,7 +26,7 @@ function buildQueryURL5day() {
 function buildQueryURL5day2(city) {
   var queryParams = city;
   console.log("queryParams: " + queryParams);
-  var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + queryParams + "&units=imperial&APPID=694e9301cf58974cd061591a93c6ebf3";
+  var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + queryParams + "&units=imperial&APPID=694e9301cf58974cd061591a93c6ebf3";
   console.log(queryURL);
   return queryURL;
 }
