@@ -32,7 +32,7 @@ function buildQueryURL5day2(city) {
 }
 
 function buildQueryURLUV(lat, lon) {
-  var queryURL = "http://api.openweathermap.org/data/2.5/uvi?&lat=" + lat + "&lon=" + lon + "&units=imperial&APPID=694e9301cf58974cd061591a93c6ebf3";
+  var queryURL = "https://api.openweathermap.org/data/2.5/uvi?&lat=" + lat + "&lon=" + lon + "&units=imperial&APPID=694e9301cf58974cd061591a93c6ebf3";
   console.log(queryURL);
   return queryURL;
 }
