@@ -33,14 +33,6 @@ function buildQueryURL5day2(city) {
 
 
 
-function clearTop() {
-  $("#top").empty();
-}
-
-function clearBottom() {
-  $("#bottom").empty();
-}
-
 function updateCurrentWeather(currentweatherdata) {
 
   // Log the Current Weather Data to console, where it will show up as an object
