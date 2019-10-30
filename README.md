@@ -23,4 +23,4 @@ https://cbarcala23.github.io/homework6/
 "script.js"
 
 # Screenshots
-
+![Screen Shot 2019-10-29 at 5 04 39 PM](https://user-images.githubusercontent.com/54015205/67818390-4a375e80-fa6e-11e9-9561-1d31208aca0b.png)
