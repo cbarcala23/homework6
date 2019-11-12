@@ -7,38 +7,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather API</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/CSS/style.css" />
 
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+    <!--<nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 display-centered">Weather Dashboard</span>
+    </nav>-->
+
+    <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0">
+        <h1 class="col text-center">Weather Dashboard</h1>
     </nav>
 
     <div class="row" id="div">
-        <div class="col-md-3" id="left">
+        <nav class="col-md-3 sidebar" id="left">
             <!-- Here we create an HTML Form for handling the inputs-->
-            <form role="form">
-                <div class="form-group">
-                    <label for="search">Search for a City:</label>
-                    <input type="text" class="form-control" id="search-term">
-                </div>
-                <!-- Here we have our final submit button -->
+            <h3>Search for a City:</h3>
+            <form class="form-inline">
+                <input type="text" class="form-control form-control-mds w-75" id="search-term" placeholder="Search">
                 <button type="submit" class="btn btn-default" id="run-search">
-                    <i class="fa fa-search"></i> Search</button>
+                    <i class="fa fa-search"></i></button>
+                <!-- Here we have our final submit button -->
                 <button class="btn btn-default" id="clear-all">
                     <i class="fa fa-trash"></i> Clear Results</button>
             </form>
+
             <div class="searches"></div>
-        </div>
+
+        </nav>
         <div class="col-md-9">
             <div class="row1" id="top">
 
                 <div class="card">
                     <h4 class="card-header" id="city">City : </h4>
                     <div class="card-body">
-                        <p class="card-text"><b>Weather : </b><span id="weather"></span> </p>
+                        <p class="card-text"><b></b><span id="icon"></span> </p>
                         <p class="card-text"><b>Temperature : </b><span id="temp"></span> </p>
                         <p class="card-text"><b>Humidity : </b><span id="humidity"></span></p>
                         <p class="card-text"><b>Wind Speed : </b><span id="wind"></span> </p>
